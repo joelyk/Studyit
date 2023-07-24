@@ -1,64 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+<h1> Développement d'une Application Web Laravel pour la Digitalisation des Inscriptions à une Formation
+</h1>
+<h2> Description du Projet  </h2>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ce projet consiste à développer une application web en utilisant le framework Laravel, visant à digitaliser le processus d'inscription à une formation spécifique. L'application offrira aux utilisateurs une interface intuitive pour découvrir les détails de la formation, remplir un formulaire d'inscription et fournir un dashboard qui répertorie toutes les personnes inscrites.
+Fonctionnalités
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+L'application présentera les fonctionnalités suivantes :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    Présentation de la Formation : Une page d'accueil permettra aux utilisateurs de découvrir les informations clés concernant la formation. Cela comprendra une description de la formation, le programme, les dates et les frais.
 
-## Learning Laravel
+    Formulaire d'Inscription : Les utilisateurs auront la possibilité de remplir un formulaire d'inscription en fournissant leurs coordonnées et d'autres informations requises. Le formulaire sera conçu de manière conviviale pour garantir une expérience utilisateur optimale.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    Dashboard des Inscriptions : Un dashboard sécurisé sera accessible aux administrateurs pour visualiser toutes les personnes inscrites. Les informations sur les participants, telles que les noms, les adresses e-mail et les détails de la formation choisie, seront affichées sous forme de liste ou de tableau.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#Captures d'écran
 
-## Laravel Sponsors
+#Insérez ici des captures d'écran représentatives de l'application, montrant la page d'accueil, le formulaire d'inscription et le dashboard des inscriptions.
+Technologies Utilisées
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    Backend : Laravel (version X.X.X)
+    Frontend : HTML, CSS, JavaScript, Bootstrap 
+    Base de Données : MySQL.
+    Autres Outils : Composer (gestionnaire de dépendances), Git (contrôle de version)
 
-### Premium Partners
+Installation et Utilisation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    Clonez ce dépôt GitHub sur votre machine locale en utilisant la commande suivante :
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+git clone https://github.com/joelyk/Studyit.git
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Installez les dépendances requises en exécutant la commande suivante :
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+cd studyit
+composer install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Configurez votre base de données en copiant le fichier .env.example en .env et en y spécifiant les informations de connexion à votre base de données.
+
+Générez la clé d'application en utilisant la commande suivante :
+
+
+
+php artisan key:generate
+
+Migrez la base de données en utilisant la commande suivante :
+
+php artisan migrate
+
+Lancez le serveur de développement en exécutant la commande :
+
+php artisan serve
+
+Accédez à l'application depuis votre navigateur en vous rendant sur l'adresse locale :
+
+
+
+    http://localhost:8000
+
+Contributeurs
+
+   ---
+
+Remarques Importantes
+
+    Cette application est développée dans un but éducatif et peut être sujette à des améliorations et des mises à jour régulières.
+    N'hésitez pas à ouvrir une issue pour signaler un bogue ou proposer une nouvelle fonctionnalité.
