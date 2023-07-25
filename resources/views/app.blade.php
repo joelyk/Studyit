@@ -11,7 +11,7 @@
       <header>
              <div class="logo">
                 <p>
-                    <span>Study</span> IT
+                    <span>IT</span> KOLA
                 </p>
              </div>
               @include('navbar')
@@ -35,22 +35,41 @@
             <img src="{{ asset('images/onlinestudyit.png') }}" alt="studyit"> 
         </div>
       </section>
-      
-      
+  
       <section id="menu">
-       
-        <img src="{{ asset('images/genius_Winners.png') }}" alt="studyit"> 
-      </section>
+        <h4 class="mini_title">Nos Formations</h4>
+        <h2 class="title"> Certifiantes </h2>
+      <div class="dishes">
+        <div class="dish">
+          <img src="{{ asset('images/python.png') }}">
+          <h2>test</h2>
+          <a href="geniusniveau1.Nombre de Formations"> Plus d'infos </a>
+        </div>
+        <div class="dish">
+         <img src="{{ asset('images/css.jpg') }}">
+         <p> Nombre de Formations 2</p>
+         <h2>test</h2>
+         <a href="geniusniveau2.Nombre de Formations"> Plus d'infos </a>
+       </div>
+       <div class="dish">
+         <img src="{{ asset('images/django.jpg') }}">
+         <p> Nombre de Formations 3</p>
+         <h2>test</h2>
+         <a href="geniusniveau3.Nombre de Formations"> Plus d'infos </a>
+       </div>
+     
+  </div>
+</section>
       
-      @yield('contentformation')
        
       @yield('contentformulaire')
-
-      @yield('contentaffichagepersonne')
 
       @yield('contentsearch')
 
       @yield('contentaffichageformation')
+
+     
+
 <!-- Section  a propos de nous-->
        <section id="about_us">
           <h4 class="mini_title">A propos de Nous</h4>
@@ -72,28 +91,8 @@
             </div>
           </div>
        </section> 
-        <!--Footer-->
-        <footer>
-            <div class="references">
-                <div class="reference">
-                    <img src="{{ asset('images/computer.png') }}" alt="horloge">
-                    <h2>Pandacodeur.com</h2>
-                    <p></p> 
-                </div>
-                <div class="reference">
-                    <img src="{{ asset('images/endroit.png') }}" alt="horloge">
-                    <h2>Dschang-Cameroun</h2>
-                    <p></p> 
-                </div>
-                <div class="reference">
-                    <img src="{{ asset('images/telephone.png') }}" alt="horloge">
-                    <h2>+237 658395978</h2>
-                    <p></p> 
-                </div>
-                <hr>
-            </div>
-            <p class="footer_text">Copyright © 2023 Tous les droits sont réservés. Realise par <span>Joël_yk</span>. </p>
-        </footer>
+        
+       @include('footer')
         <script>
             var small_menu = document.querySelector('.toggle_menu')
             var menu = document.querySelector('.menu')

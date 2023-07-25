@@ -15,7 +15,7 @@ class FormationController extends Controller
     }
     
     public function show($id){
-        $formations= Formation::all();
+        $formations= Formation::paginate(6);
         $formation = $formations[$id] ?? 'pas de formations';
         return view('formation',[
             'formation'=>$formation

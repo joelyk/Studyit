@@ -33,6 +33,7 @@ header{
     z-index: 10;
 }  
 
+
 .menu{
     display: flex;
 }
@@ -108,7 +109,7 @@ header{
 }
 
 #home .left p {
-    font-size: 12px;
+    font-size: 20px;
     color: #999;
 }
 
@@ -179,12 +180,12 @@ header{
 
 .mini_title{
     margin-top: 25px;
-    font-size: 16px;
+    font-size: 25px;
     color: rgb(0, 162, 255);
     text-transform: capitalize;
 }
 .title{
-    font-size: 16px;
+    font-size: 26px;
     text-transform: uppercase;
     color: red;
     margin-bottom: 25px;
