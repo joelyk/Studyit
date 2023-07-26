@@ -14,18 +14,11 @@ class Personne extends Model
         'first_name',
         'last_name',
         'gender',
-        'education_level',
-        'field',
-        'specialization',
-        'address',
         'phone_number',
         'email',
-        'age',
-        'interests',
-        'career_project',
-        'stage_requirements'
+        'age'
     ];
-    public function formations(){
+    public function forms(){
         return $this->belongsToMany(Formation::class);
         
     }

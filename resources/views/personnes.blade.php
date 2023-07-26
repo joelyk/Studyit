@@ -25,7 +25,7 @@
 </header>
 
  <!-- Search Widget -->
- <section>
+ <section id="menu">
  <div class="card my-4">
     <h5 class="card-header">Rechercher un personne</h5>
     <form class="card-body" action="/search" method="GET" role="search">
@@ -37,7 +37,7 @@
     </form>
 </div>
  </section>
-
+ 
 <div class="container">
     <h1 class="text-center" class="title">Liste des personnes d'inscrites :</h1>
     <a href="{{route('personnes.create')}}" class="btn btn-primary" >Ajouter un personne</a>

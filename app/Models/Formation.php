@@ -20,7 +20,7 @@ class Formation extends Model
         return $this->hasOne(Image::class);
     }
 
-    public function personnes(){
+    public function pers(){
         return $this->belongsToMany(Personne::class);
         
     }

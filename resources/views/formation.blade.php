@@ -1,49 +1,46 @@
 
-@extends('app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyIT</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
 
-@section('contentaffichageformation')
-    <!-- Search Widget -->
-    <div class="card my-4">
-        <h5 class="card-header">Rechercher une Formation</h5>
-        <form class="card-body" action="/search" method="GET" role="search">
-            {{ csrf_field() }}
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Rechercher..." name="q">
-                <button class="btn btn-secondary" type="submit">Go!</button>
-            </div>
-        </form>
+<body>
+  <header>
+    <div class="logo">
+       <p>
+           <span>IT</span> KOLA
+       </p>
     </div>
+     @include('navbar')
 
-    <div class="container">
-        <h1 class="text-center">Liste de nos Formations :</h1>
-        <div class="table-responsive">
-            <table class="table table-bordered mt-4">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Titre</th>
-                        <th>Contenue</th>
-                        <th>Inscrits</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse ($formations as $fromation)
-                        <tr>
-                            <td>{{$personne->id}}</td>
-                            <td>{{ $formation->title }}</td>
-                            <td>{{ $formation->content }}</td>
-                          
-                        </tr>
-                    @empty
-                        <tr>
-                            <td colspan="15">Aucune personne trouvé.</td>
-                        </tr>
-                    @endforelse
-                </tbody>
-            </table>
-        </div>
+    <div class="toggle_menu">
+
     </div>
+</header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-LF8soMnrwF6tc0GLA/VxF4uLx2IBFZXOXtgQxUYv1n3aohVRVlpisJOGGFjnxLCo" crossorigin="anonymous"></script>
+<body>
+
+   <section id="home">
+    <div class="left">
+        <h4>Decouvrir : </h4>
+        <h1> {{$formation->title}} </h1>
+        <p>
+            {{$formation->content}}
+        </p>
+        <button> <a href="{{route('personnes.create')}}">S'inscrire A cette Formation</a></button>
+    </div>
+    <div class="right">
+        <img src="{{ asset('images/laravel.png') }}" alt="Formation logo"> 
+    </div>
+  </section>
+
+
+ 
 </body>
-@endsection
+ @include('footer')
+</html>

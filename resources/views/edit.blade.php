@@ -1,10 +1,32 @@
 
-@extends('app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyIT</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
 
-@section('contentaffichagepersonne')
 <body>
+  <header>
+    <div class="logo">
+       <p>
+           <span>IT</span> KOLA
+       </p>
+    </div>
+     @include('navbar')
+
+    <div class="toggle_menu">
+
+    </div>
+</header>
+
+<body>
+   <section id="menu">
     <h1>Modifier un personne :</h1>
-    <div class="container" style="width: 50%; margin: 0 auto;">
+    <div class="container" style="width: 60%; margin: 20 auto;">
         <form action="{{route('personnes.update', ['id'=> $personne])}}" method="POST">
             @csrf
             @method('put')
@@ -22,26 +44,10 @@
                     <label for="gender">Sexe :</label>
                     <input type="text" id="gender" name="gender" value="{{$personne->gender}}" class="form-control" required>
                 </div>
-                <div class="form-group">
-                    <label for="education_level">Niveau d'études :</label>
-                    <input type="text" id="education_level" name="education_level" value="{{$personne->education_level}}" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="field">Filière :</label>
-                    <input type="text" id="field" name="field" value="{{$personne->field}}" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="specialization">Spécialité :</label>
-                    <input type="text" id="specialization" name="specialization" value="{{$personne->specialization}}" class="form-control">
-                </div>
             </fieldset>
 
             <fieldset style="width: 50%; margin: 0 auto;">
                 <legend>Modifier vos coordonnées</legend>
-                <div class="form-group">
-                    <label for="address">Adresse :</label>
-                    <input type="text" id="address" name="address" value="{{$personne->address}}" class="form-control" required>
-                </div>
                 <div class="form-group">
                     <label for="phone_number">Numéro de téléphone :</label>
                     <input type="text" id="phone_number" name="phone_number" value="{{$personne->phone_number}}" class="form-control" required>
@@ -56,27 +62,13 @@
                 </div>
             </fieldset>
 
-            <fieldset style="width: 50%; margin: 0 auto;">
-                <legend>Modifier les informations sur le stage</legend>
-                <div class="form-group">
-                    <label for="interests">Domaine intéressé par le stage :</label>
-                    <input type="text" id="interests" name="interests" value="{{$personne->interests}}" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="career_project">Description du projet professionnel :</label>
-                    <textarea id="career_project" name="career_project" class="form-control" rows="5" required>{{$personne->career_project}}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="stage_requirements">Ce qu'il vous faut pour mener à bien votre stage :</label>
-                    <select id="stage_requirements" name="stage_requirements" class="form-control">
-                        <option value="Fonctionnement plateforme Upwork" {{$personne->stage_requirements == 'Fonctionnement plateforme Upwork' ? 'selected' : ''}}>Fonctionnement plateforme Upwork</option>
-                        <option value="Autre" {{$personne->stage_requirements == 'Autre' ? 'selected' : ''}}>Autre</option>
-                    </select>
-                </div>
-            </fieldset>
-
             <button type="submit" class="btn btn-primary">Modifier</button>
         </form>
     </div>
+   </section>
+
+
+ 
 </body>
-@endsection
+ @include('footer')
+</html>

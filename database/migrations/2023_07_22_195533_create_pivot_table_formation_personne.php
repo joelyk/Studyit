@@ -14,10 +14,10 @@ class CreatePivotTableFormationPersonne extends Migration
     public function up()
     {
         Schema::create('formation_personne', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('formation_id')->constrained()->onDelete ('cascade');
-            $table->foreignId('personne_id')->constrained()->onDelete ('cascade');
-            $table->timestamps();
+           $table->unsignedBigInteger('formations_id');
+           $table->unsignedBigInteger('personnes_id');
+           $table->foreign('formations_id')->references('id')->on('formations')->onDelete('cascade');
+           $table->foreign('personnes_id')->references('id')->on('personnes')->onDelete('cascade');
         });
     }
 

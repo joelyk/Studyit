@@ -25,27 +25,35 @@
 <section id="menu">
     <h4 class="mini_title">Nos Formations</h4>
     <h2 class="title"> Certifiantes </h2>
-    @foreach ($formations as $form)
+    
     <div class="dishes">
+      @foreach ($formations as $form)
           <div class="dish">
             <img src="{{ asset('images/python.png') }}">
-            <h2>{{$form->title}}</h2>
-            <a href="geniusniveau1.Nombre de Formations"> Plus d'infos </a>
+            <p> {{$form->title}}</p>
+            <h2>{{$form->created_at}}</h2>
+            <a href="#"> Plus d'infos </a>
           </div>
+          @endforeach
+          @foreach ($formations as $form)
           <div class="dish">
            <img src="{{ asset('images/laravel.png') }}">
-           <p> Nombre de Formations 2</p>
-           <h2>{{$form->title}}</h2>
-           <a href="geniusniveau2.Nombre de Formations"> Plus d'infos </a>
+           <p> {{$form->title}}</p>
+           <h2>{{$form->created_at}}</h2>
+           <a href="#"> Plus d'infos </a>
          </div>
+         @endforeach
+         @foreach ($formations as $form)
          <div class="dish">
            <img src="{{ asset('images/django.jpg') }}">
-           <p> Nombre de Formations 3</p>
-           <h2>{{$form->title}}</h2>
-           <a href="geniusniveau3.Nombre de Formations"> Plus d'infos </a>
+           <p> {{$form->title}}</p>
+           <h2>{{$form->created_at}}</h2>
+           <a href="{{route('formation.show', ['id'=> $form])}}" > Plus d'infos </a>
          </div>
+         @endforeach
     </div>
-    @endforeach
+
+   
     
   </section>
 

@@ -35,7 +35,7 @@
             <img src="{{ asset('images/onlinestudyit.png') }}" alt="studyit"> 
         </div>
       </section>
-  
+          
       <section id="menu">
         <h4 class="mini_title">Nos Formations</h4>
         <h2 class="title"> Certifiantes </h2>
@@ -60,13 +60,16 @@
      
   </div>
 </section>
+
+<P class="pt-4 italic">
+Formations:
+
+</P>
       
        
       @yield('contentformulaire')
 
       @yield('contentsearch')
-
-      @yield('contentaffichageformation')
 
      
 

@@ -16,6 +16,7 @@ class CreateFormationsTable extends Migration
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('picture');
             $table->mediumText('content');
             $table->timestamps();
         });

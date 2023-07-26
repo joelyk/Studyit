@@ -18,7 +18,7 @@ use App\Http\Controllers\FormationController;
 Route::get('/', function () { return view('app'); });
 //Route::get('/', [FormationController::class, 'index']);
 Route::get('/formations', [FormationController::class, 'index'])->name('formations.index');
-Route::get('/formation/{id}', [FormationController::class, 'index'])->whereNumber('id');
+Route::get('/formation/{id}', [FormationController::class, 'show'])->name('formation.show');
 //Route::get('/', [PersonneController::class, 'index']);
 Route::get('/personnes', [PersonneController::class, 'index'])->name('personnes.index');
 Route::get('/personnes/create', [PersonneController::class, 'create'])->name('personnes.create');

@@ -25,16 +25,9 @@ class PersonneController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'gender' => 'required',
-            'education_level' => 'required',
-            'field' => 'required',
-            'specialization' => 'nullable',
-            'address' => 'required',
             'phone_number' => 'required',
             'email' => 'required|email',
             'age' => 'nullable',
-            'interests' => 'required',
-            'career_project' => 'required',
-            'stage_requirements' => 'required'
         ]);
 
         personne::create($data);
@@ -55,16 +48,9 @@ class PersonneController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'gender' => 'required',
-            'education_level' => 'required',
-            'field' => 'required',
-            'specialization' => 'nullable',
-            'address' => 'required',
             'phone_number' => 'required',
             'email' => 'required|email',
-            'age' => 'nullable',
-            'interests' => 'required',
-            'career_project' => 'required',
-            'stage_requirements' => 'required'
+            'age' => 'nullable'
         ]);
 
         $personne = personne::findOrFail($id);
@@ -89,16 +75,9 @@ class PersonneController extends Controller
             ->where('first_name', 'like', "%{$key}%")
             ->orWhere('last_name', 'like', "%{$key}%")
             ->orWhere('gender', 'like', "%{$key}%")
-            ->orWhere('education_level', 'like', "%{$key}%")
-            ->orWhere('field', 'like', "%{$key}%")
-            ->orWhere('specialization', 'like', "%{$key}%")
-            ->orWhere('address', 'like', "%{$key}%")
             ->orWhere('phone_number', 'like', "%{$key}%")
             ->orWhere('email', 'like', "%{$key}%")
             ->orWhere('age', 'like', "%{$key}%")
-            ->orWhere('interests', 'like', "%{$key}%")
-            ->orWhere('career_project', 'like', "%{$key}%")
-            ->orWhere('stage_requirements', 'like', "%{$key}%")
             ->get();
 
         return view('search', compact('personnes', 'key'));
