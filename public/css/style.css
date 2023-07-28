@@ -281,7 +281,7 @@ header{
     margin: 20px 0;
     padding: 5px 60px;
     background-color: red;
-    border: 1;
+    /*border: 1;*/
 }
 
 .about .right button a{
@@ -322,7 +322,7 @@ header{
 .comments .comment{
     width: 30%;
     border: 1px solid #ccc;
-    border-radius: 1px solid black;
+    /*border-radius: 1px solid black;*/
     padding: 20px;
 }
 .comments .comment div h4{
