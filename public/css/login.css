@@ -1,0 +1,369 @@
+@import 'app.css';
+/* CSS pour la barre de progression */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress {
+    height: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background-color: #007bff;
+}
+
+/* CSS pour masquer les étapes non actives du formulaire */
+.form-step:not(.active) {
+    display: none;
+}
+
+/* CSS pour les étapes marquées en haut de la page */
+.step-indicator {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2222224D;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.step-indicator.active {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+}
+
+/* CSS pour rendre le formulaire responsive */
+.form-fieldset {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+fieldset{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: calc(25% - 250px);
+    top: 30vh;
+    border: none;
+}
+
+.form-group{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+}
+.form-group div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#group1{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#group2{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.form-group div input{
+    width: 235px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container button {
+    position: fixed;
+    bottom: 40px;
+    /*right: 40px;*/
+    right: calc(25% - 250px);
+}
+#submitButton{
+    position: fixed;
+    right: calc(25% - 250px);
+    bottom: 40px;
+}
+#prevButton{
+    margin-right: 120px;
+    color: #222222;
+    border: 0.5px solid rgba(34, 34, 34, 0.3);
+    background-color: whitesmoke;
+}
+.btn-primary:hover{
+    background-color: royalblue;
+}
+button{
+    height: 40px;
+    width:108px ;
+    border: none;
+    border-radius: 5px;
+}
+.btn-primary{
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #def0ff;
+    /*margin-right: 10px;*/
+}
+.contain{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: ;*/
+    flex-direction: row;
+    left: 0;
+}
+.left{
+    height: 100%;
+    width: calc(50% - 20px);
+    margin-top: 90px;
+}
+.right{
+    min-height: 99vh;
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top-right{
+    position: absolute;
+    top: 20vh;
+}
+
+h1{
+    margin: 10px 0 0 50px;
+    font-size: 4.5em;
+    color: #004471;
+}
+h2{
+    margin: 40px 0 0 50px;
+    font-size: 2.5em;
+    color: #004471;
+}
+h5{
+    margin: 5px 0 0 50px;
+    color: rgba(0, 68, 113, 0.5);
+    font-size: 1.3em;
+}
+input{
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px ;
+    padding-right: 15px;
+    background-color: rgba(0, 123, 255, 0.15);
+}
+#sexe1{
+    display: flex;
+}
+input.form-radio{
+    height: 25px;
+    width: auto;
+    margin-left:40px ;
+}
+.lab{
+    margin-left: 40px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input[type=text]:focus{
+    border: 1px solid #007bff;
+}
+
+@media (max-width: 1300px) {
+
+    fieldset{
+        right: calc(25% - 230px);
+    }
+    .button-container button {
+        right: calc(25% - 230px);
+    }
+    .left{
+        width: calc(50% - 100px);
+    }
+    #submitButton{
+        right: calc(25% - 230px);
+    }
+}
+@media (max-width: 1100px) {
+
+    fieldset{
+        right: calc(25% - 200px);
+    }
+    .button-container button {
+        right: calc(25% - 200px);
+    }
+    .left{
+        width: calc(50% - 100px);
+    }
+    #submitButton{
+        right: calc(25% - 200px);
+    }
+}
+
+@media (max-width: 1000px) {
+
+    input{
+        height: 45px;
+    }
+    fieldset{
+        right: calc(25% - 200px);
+    }
+    .button-container button {
+        right: calc(25% - 200px);
+    }
+    .left{
+        width: calc(50% - 200px);
+        left: 0;
+        /*border: 1px solid #007bff;*/
+    }
+}
+
+@media (max-width: 850px) {
+
+    input{
+        width: 450px;
+    }
+    #group1{
+        width: 450px;
+    }
+    #group1 div input{
+        width: 220px;
+    }
+    #group2{
+        width: 450px;
+    }
+    #group2 div input{
+        width: 220px;
+    }
+    .form-group{
+        width: 450px;
+    }
+
+    fieldset{
+        right: calc(25% - 170px);
+    }
+    .button-container button {
+        right: calc(25% - 170px);
+    }
+    .left{
+        width: calc(50% - 170px);
+    }
+    #submitButton{
+        right: calc(25% - 170px);
+    }
+
+    h1{
+        margin: 10px 0 0 20px;
+        font-size: 4em;
+        color: #004471;
+    }
+    h2{
+        margin: 40px 0 0 20px;
+        font-size: 2em;
+        color: #004471;
+    }
+    h5{
+        margin: 5px 0 0 20px;
+        color: rgba(0, 68, 113, 0.5);
+        font-size: 1em;
+    }
+}
+@media (max-width: 700px) {
+
+    input{
+        height: 40px;
+        width: 100%;
+    }
+    #group1{
+        width: 90%;
+        flex-direction: column;
+    }
+    #group1 div input{
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+    #group2{
+        width: 90%;
+        flex-direction: column;
+    }
+    #group2 div input{
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+    .form-group{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    fieldset{
+        right: calc(50% - 116px);
+    }
+    #submitButton{
+        right: calc(50% - 126px);
+    }
+
+    .button-container button {
+        right: calc(50% - 126px);
+    }
+    .top-right{
+        top: 140px;
+    }
+    .left{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .step-indicator.active {
+        height: 25px;
+        width: 25px;
+        font-size: 11px;
+    }
+    .right{
+        position: absolute;
+        top: 30px;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 4em;
+        color: #004471;
+    }
+    h2{
+        display: none;
+    }
+    h5{
+        display: none;
+    }
+}

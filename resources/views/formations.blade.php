@@ -12,13 +12,13 @@
   <header>
     <div class="logo">
        <p>
-           <span>IT</span> KOLA
+           <span>Cap</span>Build
        </p>
     </div>
      @include('navbar')
 
     <div class="toggle_menu">
-
+        <span class="center-menu-bar"></span>
     </div>
 </header>
 
@@ -46,10 +46,17 @@
          </div>
     </div>
     @endforeach
-    
+
   </section>
 
   @include('footer')
-
+  <script>
+      var small_menu = document.querySelector('.toggle_menu')
+      var menu = document.querySelector('.menu')
+      small_menu.onclick=function(){
+          small_menu.classList.toggle('active');
+          menu.classList.toggle('responsive');
+      }
+  </script>
 </body>
 </html>

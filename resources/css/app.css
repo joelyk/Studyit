@@ -31,7 +31,7 @@ header{
     background-color: whitesmoke;
     box-shadow: 0 0 10px black;
     z-index: 10;
-}  
+}
 
 
 .menu{
@@ -176,6 +176,7 @@ header{
     flex-direction: column;
     background-color: whitesmoke;
     padding: 50px 10px;
+    min-height: 70vh;
 }
 
 .mini_title{
@@ -262,7 +263,7 @@ header{
 }
 
 .about .left img{
-    width: 90%;  
+    width: 90%;
 }
 .about .right{
     width: 90%;
@@ -270,8 +271,8 @@ header{
 
 .about .right h3{
     font-size: 35px;
-    color: aqua
-    margin 10px 0;
+    color: aqua;
+    margin: 10px 0;
 }
 .about .right p{
     font-size: 14px;
@@ -282,7 +283,7 @@ header{
     margin: 20px 0;
     padding: 5px 60px;
     background-color: red;
-    border: 1;
+    border: 1px solid #222222;
 }
 
 .about .right button a{
@@ -323,7 +324,7 @@ header{
 .comments .comment{
     width: 30%;
     border: 1px solid #ccc;
-    border-radius: 1px solid black;
+    border-radius: 1px;
     padding: 20px;
 }
 .comments .comment div h4{
@@ -378,8 +379,10 @@ header{
 /* footer css*/
 
 footer{
+    width: 100%;
+    bottom: 0;
     background-color: gainsboro;
-    
+
 }
 
 footer .references{
@@ -510,6 +513,13 @@ hr{
     position: relative;
     cursor: pointer;
    }
+   .center-menu-bar{
+       width: 28px;
+       height: 3px;
+       border-radius: 15px;
+       background-color: red;
+       transition: 0.5s;
+   }
    .toggle_menu::before{
     position: absolute;
     content: "";
@@ -543,17 +553,23 @@ hr{
     header .menu.responsive{
         display: flex;
         position: absolute;
-        top: 50px;
+        top: 52px;
         left: 0;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        background-color: whitesmoke;
-        box-shadow:black;
+        width: 90%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #dcdcdc;
+        box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.21);
         flex-direction: column;
     }
     header .menu.responsive li{
-        margin: 15px 0;
+        margin: 0;
+        border-bottom: 0.7px solid #4a5568;
+    }
+    header .menu.responsive li a{
+        display: flex;
+        width: 100%;
+        padding: 15px 0 15px 30px;
     }
 
 }
@@ -563,7 +579,9 @@ hr{
   background-color: #eee;
   border-radius: 5px;
   padding: 16px;
-  margin: 16px 0
+  margin: 16px 0;
+    min-height: 70vh;
+
 }
 
 .container::after {
@@ -593,7 +611,7 @@ hr{
       display: block;
   }
 }
-/* Genius niveau style 
+/* Genius niveau style
 .container {
     border: 2px solid #ccc;
     background-color: #eee;
@@ -601,24 +619,24 @@ hr{
     padding: 16px;
     margin: 16px 0
   }
-  
+
   .container::after {
     content: "";
     clear: both;
     display: table;
   }
-  
+
   .container img {
     float: left;
     margin-right: 20px;
     border-radius: 50%;
   }
-  
+
   .container span {
     font-size: 20px;
     margin-right: 15px;
   }
-  
+
   @media (max-width: 500px) {
     .container {
         text-align: center;
@@ -628,7 +646,7 @@ hr{
         float: none;
         display: block;
     }
-  } 
+  }
   */
    /* Style the buttons that are used to open and close the accordion panel */
 
@@ -644,11 +662,6 @@ hr{
         font-size: 15px;
         transition: 0.4s;
       }
-      
-      .active, .accordion:hover {
-        background-color: red ;
-      }
-      
       .accordion:after {
         content: '\002B';
         color: white ;
@@ -656,11 +669,9 @@ hr{
         float: right;
         margin-left: 15px;
       }
-      
-      .active:after {
-        content: "\2212";
+      .toggle_menu.active span.center-menu-bar{
+          width: 0;
       }
-      
       .panel {
         padding: 0 18px;
         max-height: 0;
@@ -674,30 +685,30 @@ hr{
         font-family: Arial;
         margin: 0;
       }
-      
+
 * {
     box-sizing: border-box;
   }
-  
+
   img {
     vertical-align: middle;
   }
-  
+
   /* Position the image container (needed to position the left and right arrows) */
   .container {
     position: relative;
   }
-  
+
   /* Hide the images by default */
   .mySlides {
     display: none;
   }
-  
+
   /* Add a pointer when hovering over the thumbnail images */
   .cursor {
     cursor: pointer;
   }
-  
+
   /* Next & previous buttons */
   .prev,
   .next {
@@ -714,19 +725,19 @@ hr{
     user-select: none;
     -webkit-user-select: none;
   }
-  
+
   /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  
+
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  
+
   /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
@@ -735,7 +746,7 @@ hr{
     position: absolute;
     top: 0;
   }
-  
+
   /* Container for image text */
   .caption-container {
     text-align: center;
@@ -743,25 +754,28 @@ hr{
     padding: 2px 16px;
     color: white;
   }
-  
+
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   /* Six columns side by side */
   .column {
     float: left;
     width: 16.66%;
   }
-  
+
   /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.6;
   }
-  
+
   .active,
   .demo:hover {
     opacity: 1;
+  }
+  e{
+      color: #222222;
   }

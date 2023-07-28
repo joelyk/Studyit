@@ -4,38 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyIT</title>
+    <title>CapBuild</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
       <header>
              <div class="logo">
                 <p>
-                    <span>IT</span> KOLA
+                    <span>Cap</span>Build
                 </p>
              </div>
               @include('navbar')
 
              <div class="toggle_menu">
-
+                <span class="center-menu-bar"></span>
              </div>
       </header>
- 
+
       <!-- section accueil home -->
       <section id="home">
         <div class="left">
             <h4>Bienvenue Chez : </h4>
-            <h1> StudyIT </h1>
+            <h1> Cap<e>Build</e></h1>
             <p>
               StudyIT est une plateforme d'apprentissage en ligne dédiée à vous offrir les meilleurs cours pour développer vos compétences et atteindre vos objectifs académiques et professionnels. Notre mission est de rendre l'éducation accessible à tous, en fournissant des formations de qualité, dispensées par des experts dans leur domaine.
             </p>
             <button> <a href="{{route('personnes.create')}}">S'inscrire Maintenant</a></button>
         </div>
         <div class="right">
-            <img src="{{ asset('images/onlinestudyit.png') }}" alt="studyit"> 
+            <img src="{{ asset('images/onlinestudyit.png') }}" alt="studyit">
         </div>
       </section>
-  
+
       <section id="menu">
         <h4 class="mini_title">Nos Formations</h4>
         <h2 class="title"> Certifiantes </h2>
@@ -57,18 +57,18 @@
          <h2>test</h2>
          <a href="geniusniveau3.Nombre de Formations"> Plus d'infos </a>
        </div>
-     
+
   </div>
 </section>
-      
-       
+
+
       @yield('contentformulaire')
 
       @yield('contentsearch')
 
       @yield('contentaffichageformation')
 
-     
+
 
 <!-- Section  a propos de nous-->
        <section id="about_us">
@@ -90,8 +90,8 @@
                 <button> <a href="/formations"> Decouvre Plus</a></button>
             </div>
           </div>
-       </section> 
-        
+       </section>
+
        @include('footer')
         <script>
             var small_menu = document.querySelector('.toggle_menu')

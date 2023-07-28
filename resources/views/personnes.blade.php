@@ -14,13 +14,13 @@
   <header>
     <div class="logo">
        <p>
-           <span>IT</span> KOLA
+           <span>Cap</span>Build
        </p>
     </div>
      @include('navbar')
 
     <div class="toggle_menu">
-
+        <span class="center-menu-bar"></span>
     </div>
 </header>
 
@@ -67,7 +67,7 @@
                         <td>{{ $personne->phone_number }}</td>
                         <td>{{ $personne->email }}</td>
                         <td>{{ $personne->age }}</td>
-                        <td> 
+                        <td>
                             <a href="{{route('personnes.edit', ['id'=> $personne])}}" class="btn btn-primary">Modifier</a>
                         </td>
                     </tr>
@@ -82,6 +82,13 @@
 </div>
   @include('footer')
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-LF8soMnrwF6tc0GLA/VxF4uLx2IBFZXOXtgQxUYv1n3aohVRVlpisJOGGFjnxLCo" crossorigin="anonymous"></script>
-
+  <script>
+      var small_menu = document.querySelector('.toggle_menu')
+      var menu = document.querySelector('.menu')
+      small_menu.onclick=function(){
+          small_menu.classList.toggle('active');
+          menu.classList.toggle('responsive');
+      }
+  </script>
 </body>
 </html>
