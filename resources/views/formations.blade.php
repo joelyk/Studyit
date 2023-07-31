@@ -29,7 +29,7 @@
     <div class="dishes">
       @foreach ($formations as $form)
           <div class="dish">
-            <img src="{{ asset('images/python.png') }}">
+            <img src="{{ $form->picture }}">
             <p> {{$form->title}}</p>
             <h2>{{$form->created_at}}</h2>
             <a href="#"> Plus d'infos </a>
@@ -37,7 +37,7 @@
           @endforeach
           @foreach ($formations as $form)
           <div class="dish">
-           <img src="{{ asset('images/laravel.png') }}">
+           <img src="{{$form->picture}}">
            <p> {{$form->title}}</p>
            <h2>{{$form->created_at}}</h2>
            <a href="#"> Plus d'infos </a>
@@ -45,7 +45,7 @@
          @endforeach
          @foreach ($formations as $form)
          <div class="dish">
-           <img src="{{ asset('images/django.jpg') }}">
+           <img src="{{ $form->picture }}">
            <p> {{$form->title}}</p>
            <h2>{{$form->created_at}}</h2>
            <a href="{{route('formation.show', ['id'=> $form])}}" > Plus d'infos </a>
