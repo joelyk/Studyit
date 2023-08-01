@@ -2,76 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>StudyIT</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
+
 <body>
-    <h1>Editer un formation</h1>
+  <header>
+    <div class="logo">
+       <p>
+           <span>IT</span> KOLA
+       </p>
+    </div>
+     @include('navbar')
 
-	<!-- Si nous avons un formation $formation -->
-	@if (isset($formation))
+    <div class="toggle_menu">
 
-	<!-- Le formulaire est géré par la route "formations.update" -->
-	<form method="formation" action="{{ route('formations.update', $formation) }}" enctype="multipart/form-data" >
+    </div>
+</header>
 
-		<!-- <input type="hidden" name="_method" value="PUT"> -->
-		@method('PUT')
+<body>
+   <section id="menu">
+    <h1>Modifier une formation :</h1>
+    <div class="container" style="width: 60%; margin: 20 auto;">
+        <form action="{{ route('formations.update', ['id' => $formation]) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('put')
+            <fieldset style="width: 50%; margin: 0 auto;">
+                <legend>Modifier les informations de la formation</legend>
+                <div class="form-group">
+                    <label for="title">Titre :</label>
+                    <input type="text" id="title" name="title" value="{{ $formation->title }}" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="picture">Image :</label>
+                    <input type="file" id="picture" name="picture" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="content">Contenu :</label>
+                    <textarea id="content" name="content" class="form-control" required>{{ $formation->content }}</textarea>
+                </div>
+            </fieldset>
 
-	@else
+            <!-- You can include other fields related to formations here -->
 
-	<!-- Le formulaire est géré par la route "formations.store" -->
-	<form method="formation" action="{{ route('formations.store') }}" enctype="multipart/form-data" >
-
-	@endif
-
-		<!-- Le token CSRF -->
-		@csrf
-		
-		<p>
-			<label for="title" >Titre</label><br/>
-
-			<!-- S'il y a un $formation->title, on complète la valeur de l'input -->
-			<input type="text" name="title" value="{{ isset($formation->title) ? $formation->title : old('title') }}"  id="title" placeholder="Le titre du formation" >
-
-			<!-- Le message d'erreur pour "title" -->
-			@error("title")
-			<div>{{ $message }}</div>
-			@enderror
-		</p>
-
-		<!-- S'il y a une image $formation->picture, on l'affiche -->
-		@if(isset($formation->picture))
-		<p>
-			<span>Couverture actuelle</span><br/>
-			<img src="{{ asset('storage/images/'.$formation->picture) }}" alt="image de couverture actuelle" style="max-height: 200px;" >
-		</p>
-		@endif
-
-		<p>
-			<label for="picture" >Couverture</label><br/>
-			<input type="file" name="picture" id="picture" >
-
-			<!-- Le message d'erreur pour "picture" -->
-			@error("picture")
-			<div>{{ $message }}</div>
-			@enderror
-		</p>
-		<p>
-			<label for="content" >Contenu</label><br/>
-
-			<!-- S'il y a un $formation->content, on complète la valeur du textarea -->
-			<textarea name="content" id="content" lang="fr" rows="10" cols="50" placeholder="Le contenu du formation" >{{ isset($formation->content) ? $formation->content : old('content') }}</textarea>
-
-			<!-- Le message d'erreur pour "content" -->
-			@error("content")
-			<div>{{ $message }}</div>
-			@enderror
-		</p>
-
-		<input type="submit" name="valider" value="Valider" >
-
-	</form>
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </form>
+    </div>
+   </section>
 
 </body>
+@include('footer')
 </html>

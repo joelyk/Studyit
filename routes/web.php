@@ -18,13 +18,14 @@ use App\Http\Controllers\FormationController;
 Route::get('/', function () { return view('app'); });
 //Route::get('/', [FormationController::class, 'index']);
 Route::get('/formations', [FormationController::class, 'index'])->name('formations.index');
-Route::get('/formation/{id}', [FormationController::class, 'show'])->name('formation.show');
 Route::get('/formations/create', [FormationController::class, 'create'])->name('formations.create');
-Route::post('/formations', [FormationController::class, 'store'])->name('formations.store');
-Route::get('/formations/{formation}', [FormationController::class, 'show'])->name('formations.show');
-Route::get('/formations/{formation}/edit', [FormationController::class, 'edit'])->name('formations.edit');
-Route::put('/formations/{formation}', [FormationController::class, 'update'])->name('formations.update');
-Route::delete('/formations/{formation}', [FormationController::class, 'destroy'])->name('formations.destroy');
+Route::get('/formation/{id}', [FormationController::class, 'show'])->name('formation.show');
+
+Route::post('/formations/create', [FormationController::class, 'store'])->name('formations.store');
+Route::get('/formations/{id}/show', [FormationController::class, 'show'])->name('formations.show');
+Route::get('/formations/{id}/edit', [FormationController::class, 'edit'])->name('formations.edit');
+Route::put('/formations/{id}/update', [FormationController::class, 'update'])->name('formations.update');
+Route::delete('/formations/{id}/destroy', [FormationController::class, 'destroy'])->name('formations.destroy');
 
 //Route::get('/', [PersonneController::class, 'index']);
 

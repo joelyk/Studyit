@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Personne;
+use App\Models\format;
 use App\Models\Formation;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -47,8 +47,8 @@ class FormationController extends Controller
             "content" => 'bail|required',
         ]);
     
-        // 2. On upload l'image dans "/storage/app/public/formations"
-        $chemin_image = $request->picture->store("formations");
+        // 2. On upload l'image dans "/storage/app/public/images"
+        $chemin_image = $request->picture->store("images");
     
         // 3. On enregistre les informations du formation
         Formation::create([
@@ -58,57 +58,56 @@ class FormationController extends Controller
         ]);
     
         // 4. On retourne vers tous les formations : route("formations.index")
-        return redirect(route("formations"));
-    }
-    public function edit(formation $formation) {
-        return view("formations.edit", compact("formation"));
-    }
-
-    public function update(Request $request, formation $formation) {
-        // 1. La validation
-    
-        // Les règles de validation pour "title" et "content"
-        $rules = [
+        return redirect(route("formations.index"));
+           
+     /*   $data = $request->validate([
             'title' => 'bail|required|string|max:255',
-            "content" => 'bail|required',
-        ];
-    
-        // Si une nouvelle image est envoyée
-        if ($request->has("picture")) {
-            // On ajoute la règle de validation pour "picture"
-            $rules["picture"] = 'bail|required|image|max:1024';
-        }
-    
-        $this->validate($request, $rules);
-    
-        // 2. On upload l'image dans "/storage/app/public/formations"
-        if ($request->has("picture")) {
-    
-            //On supprime l'ancienne image
-            Storage::delete($formation->picture);
-    
-            $chemin_image = $request->picture->store("formations");
-        }
-    
-        // 3. On met à jour les informations du formation
-        $formation->update([
-            "title" => $request->title,
-            "picture" => isset($chemin_image) ? $chemin_image : $formation->picture,
-            "content" => $request->content
+            'picture' => 'bail|required|image|max:1024',
+            'content' => 'bail|required',
         ]);
-    
-        // 4. On affiche le formation modifié : route("formations.show")
-        return redirect(route("formations.show", $formation));
+
+        Formation::create($data);
+
+        return redirect(route('formations.index')); */
+    }
+   
+  public function edit($id)
+    {
+        $formation = Formation::findOrFail($id);
+
+        return view('formations.edit', compact('formation'));
     }
 
-    public function destroy(formation $formation) {
-        // On supprime l'image existant
-        Storage::delete($formation->picture);
+
     
-        // On les informations du $formation de la table "formations"
-        $formation->delete();
-    
-        // Redirection route "formations.index"
-        return redirect(route('formations.index'));
+    public function update(Request $request, $id)
+    {
+        $data = $request->validate([
+            'title' => 'required',
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'content' => 'required',
+        ]);
+
+        $formation = Formation::findOrFail($id);
+
+        if ($request->hasFile('picture')) {
+            $data['picture'] = $request->file('picture')->store('images', 'public');
+        } else {
+            unset($data['picture']); // Remove the picture field from data if no new image is uploaded
+        }
+
+        $formation->update($data);
+
+        return redirect('formations')->with('success', 'Formation modifiée avec succès');
     }
+
+   
+    public function destroy($id)
+    {
+        $formation = Formation::findOrFail($id);
+        $formation->delete();
+
+        return redirect('/')->with('success', 'Formation supprimée avec succès');
+    }
+
 }

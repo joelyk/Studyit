@@ -11,7 +11,7 @@
 
     <h1>{{ $formation->title }}</h1>
 
-	<img src="{{ asset('storage/'.$formation->picture) }}" alt="Image de couverture" style="max-width: 300px;">
+	<img src="{{ asset('storage/images/'.$formation->picture) }}" alt="Image de couverture" style="max-width: 300px;">
 
 	<div>{{ $formation->content }}</div>
 
