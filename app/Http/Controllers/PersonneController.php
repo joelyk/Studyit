@@ -25,16 +25,9 @@ class PersonneController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'gender' => 'required',
-            'education_level' => 'required',
-            'field' => 'required',
-            'specialization' => 'nullable',
-            'address' => 'required',
+            'address' => 'nullable',
             'phone_number' => 'required',
             'email' => 'required|email',
-            'age' => 'nullable',
-            'interests' => 'required',
-            'career_project' => 'required',
-            'stage_requirements' => 'required'
         ]);
 
         personne::create($data);
@@ -104,5 +97,5 @@ class PersonneController extends Controller
         return view('search', compact('personnes', 'key'));
     }
 
-   
+
 }

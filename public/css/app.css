@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@700&family=Poppins:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap);
+/*@import url();*/
 *{
-     margin: 0;
-     padding: 0%;
-     box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
     /* font-family: 'Gentium Book Basic', serif;*/
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
 section{
     margin-top: 50px;
@@ -45,7 +46,7 @@ header{
 }
 
 .logo span {
-    color : red;
+    color : gold;
 }
 
 .menu li {
@@ -56,7 +57,7 @@ header{
 .menu li a {
     font-size: 18px;
     -webkit-text-decoration: 0;
-            text-decoration: 0;
+    text-decoration: 0;
     color: black;
     position: relative;
 }
@@ -69,14 +70,43 @@ header{
     width: 0;
     height: 2px;
     border-radius: 6px;
-    background-color: red;
+    background-color: gold;
     transition: 0.5s;
 }
 .menu li a:hover::before{
     width: 100%;
 }
+.article-pan{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.article{
+    /*background-color: #004471;*/
+    width: 80%;
+    margin-bottom: 60px;
 
 
+}
+#art2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+p{
+    color: #999;
+    font-size: 20px;
+
+}
+.article .bottom{
+    width: 50%;
+}
+.article h4 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
 /* Style du home */
 
 #home{
@@ -99,13 +129,14 @@ header{
 }
 
 #home .left h4 {
-    font-size: 20px;
+    font-size: 4em;
     color :black;
 }
 
 #home .left h1{
-    font-size: 40px;
-    color :red;
+
+    font-size: 8em;
+    color : gold;
 
 }
 
@@ -128,7 +159,7 @@ header{
 
 #home .left button a {
     -webkit-text-decoration: 0;
-            text-decoration: 0;
+    text-decoration: 0;
     color : whitesmoke;
     font-weight: bold;
     text-transform: uppercase;
@@ -142,7 +173,7 @@ header{
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-color: red;
+    background-color: gold;
 }
 
 #home .left button:hover a {
@@ -159,8 +190,8 @@ header{
 
 #home .right img{
     width: 100%;
-    animation: animate 2s linear;
-    transition: 0.5s;
+    /*animation: animate 2s linear;*/
+    /*transition: 0.5s;*/
 }
 
 /* Animation de l'image : */
@@ -196,43 +227,85 @@ header{
     text-align: center;
 }
 .dishes{
-     display: flex;
-     flex-wrap: wrap;
-     width: 80%;
-     justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
 }
 
+.dishes .dish h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222222;
+    font-family: system-ui;
+}
 .dishes .dish{
-    height: 280px;
-    width: 30%;
-    background-color: azure;
+    height: 340px;
+    width: 25%;
+    /*border: 0.5px solid #ffdb05;*/
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    border-radius: 6px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
     margin-bottom: 35px;
     transition: 0.5s;
+    box-shadow: 4px 6px 14px 10px rgba(34, 34, 34, 0.3);
 
 }
+.dishes .dish .pop {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ffc43a;
+    background-color: #ffedc6;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-stretch: expanded;
+    border-radius: 5px;
+    padding: 2px 10px 2px 7px;
+}
+.dishes .dish .pop span{
+    height: 5px;
+    width: 5px;
+    background-color: #ffc43a;
+    border-radius: 50%;
+    margin-right: 5px;
+}
 .dishes .dish img{
-    width: 130px;
-    height: 120px;
+
+    width: 100%;
+    height: 60%;
     margin-bottom: 15px;
 }
 .dishes .dish p{
     text-align: center;
     font-size: 18px;
 }
+.desc{
+    /*background-color: #007bff;*/
+    display: flex;
+    height: 10%;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    margin: 5px 0 10px 0;
+    color: #4a5568;
+    font-family: system-ui;
+    font-size: 1.2em;
+}
 .dishes .dish a{
-   margin-bottom: 10px;
-   font-size: 14px;
-   -webkit-text-decoration: 0;
-           text-decoration: 0;
-   background-color: aquamarine;
-   padding: 5px 60px ;
-   color: #fff;
-   border-radius:6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    -webkit-text-decoration: 0;
+    text-decoration: 0;
+    background-color: gold;
+    padding: 5px 60px ;
+    color: #fff;
+    border-radius:6px;
 }
 ::-webkit-scrollbar{
     width: 8px;
@@ -293,7 +366,7 @@ header{
 .about .right button a{
     color:azure;
     -webkit-text-decoration: 0;
-            text-decoration: 0;
+    text-decoration: 0;
     font-weight: bolder;
 }
 
@@ -333,9 +406,9 @@ header{
     padding: 20px;
 }
 .comments .comment div h4{
-   margin-left: 15px;
-   font-size: 14px;
-   color: red;
+    margin-left: 15px;
+    font-size: 14px;
+    color: red;
 }
 
 /*inscription Css*/
@@ -438,125 +511,125 @@ hr{
 }
 /* resposnsive */
 @media (max-width: 964px){
-   header .menu {
-    display: none;
-   }
-   header {
-    padding: 0 20px;
-   }
-   #home{
-    flex-direction: column;
-    padding: 12px;
-    height: -moz-fit-content;
-    height: fit-content;
-   }
-   #home .left , #home .right{
-    width: 100%;
-    padding: 0;
-   }
+    header .menu {
+        display: none;
+    }
+    header {
+        padding: 0 20px;
+    }
+    #home{
+        flex-direction: column;
+        padding: 12px;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+    #home .left , #home .right{
+        width: 100%;
+        padding: 0;
+    }
 
-   #home .left{
-    margin: 100px 0;
-   }
+    #home .left{
+        margin: 100px 0;
+    }
 
-   #home .left h1{
-    font-size: 20px;
-   }
-   #home .left h4{
-    font-size: 15px;
-   }
-   #home .left p{
-    font-size: 15px;
-   }
+    #home .left h1{
+        font-size: 20px;
+    }
+    #home .left h4{
+        font-size: 15px;
+    }
+    #home .left p{
+        font-size: 15px;
+    }
 
-   #menu .dishes .dish{
-    width: 100%;
-    max-width: 260px;
-   }
-   #about_us {
-    padding: 10px;
-    height: auto;
-   }
-   #about_us .about{
-      flex-direction: column;
-      height: -moz-fit-content;
-      height: fit-content;
-   }
+    #menu .dishes .dish{
+        width: 100%;
+        max-width: 260px;
+    }
+    #about_us {
+        padding: 10px;
+        height: auto;
+    }
+    #about_us .about{
+        flex-direction: column;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
 
-   #about_us .left , #about_us .right{
-     width: 100%;
-   }
+    #about_us .left , #about_us .right{
+        width: 100%;
+    }
 
-   #about_us .left {
-    height: -moz-fit-content;
-    height: fit-content;
-   }
+    #about_us .left {
+        height: -moz-fit-content;
+        height: fit-content;
+    }
 
-   #about_us .left img{
-    width: 50%;
-   }
+    #about_us .left img{
+        width: 50%;
+    }
 
-   #about_us .rigth{
-    text-align: center;
-   }
+    #about_us .rigth{
+        text-align: center;
+    }
 
-   .comment_section{
-    height: auto;
-   }
+    .comment_section{
+        height: auto;
+    }
 
-   .comment_section .comments .comment{
-     width: 100%;
-     margin-top:20px;
-   }
-   .references .reference{
-    padding: 0 50px;
-   }
-   .toggle_menu{
-    display: flex;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-   }
-   .center-menu-bar{
-       width: 28px;
-       height: 3px;
-       border-radius: 15px;
-       background-color: red;
-       transition: 0.5s;
-   }
-   .toggle_menu::before{
-    position: absolute;
-    content: "";
-    height: 3px;
-    width: 28px;
-    background-color: red;
-    border-radius: 6px;
-    transform: translateY(-10px);
-    transition: 0.5s;
-   }
+    .comment_section .comments .comment{
+        width: 100%;
+        margin-top:20px;
+    }
+    .references .reference{
+        padding: 0 50px;
+    }
+    .toggle_menu{
+        display: flex;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .center-menu-bar{
+        width: 28px;
+        height: 3px;
+        border-radius: 15px;
+        background-color: red;
+        transition: 0.5s;
+    }
+    .toggle_menu::before{
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: red;
+        border-radius: 6px;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
     .toggle_menu.active::before{
         transform: translateY(0) rotate(135deg);
         box-shadow: red;
     }
 
-   .toggle_menu::after{
-    position: absolute;
-    content: "";
-    height: 3px;
-    width: 28px;
-    background-color: red;
-    border-radius: 6px;
-    transform: translateY(10px);
-    transition: 0.5s;
-   }
+    .toggle_menu::after{
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: red;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
 
-   .toggle_menu.active::after{
-    transform: translateY(0) rotate(-135deg);
-    box-shadow: red;}
+    .toggle_menu.active::after{
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: red;}
 
     header .menu.responsive{
         display: flex;
@@ -583,41 +656,41 @@ hr{
 }
 
 .container {
-  border: 2px solid #ccc;
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 16px;
-  margin: 16px 0;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
     min-height: 70vh;
 
 }
 
 .container::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .container img {
-  float: left;
-  margin-right: 20px;
-  border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
 .container span {
-  font-size: 20px;
-  margin-right: 15px;
+    font-size: 20px;
+    margin-right: 15px;
 }
 
 @media (max-width: 500px) {
-  .container {
-      text-align: center;
-  }
-  .container img {
-      margin: auto;
-      float: none;
-      display: block;
-  }
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
 }
 /* Genius niveau style
 .container {
@@ -656,70 +729,70 @@ hr{
     }
   }
   */
-   /* Style the buttons that are used to open and close the accordion panel */
+/* Style the buttons that are used to open and close the accordion panel */
 
-    .accordion {
-        background-color: rgb(41, 154, 247);
-        color: white;
-        cursor: pointer;
-        padding: 15px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        transition: 0.4s;
-      }
-      .accordion:after {
-        content: '\002B';
-        color: white ;
-        font-weight: bold;
-        float: right;
-        margin-left: 15px;
-      }
-      .toggle_menu.active span.center-menu-bar{
-          width: 0;
-      }
-      .panel {
-        padding: 0 18px;
-        max-height: 0;
-        overflow: hidden;
-        font-size: 15px;
-        transition: max-height 0.2s ease-out;
-        text-align: left;
-      }
-      /* Css slideshow animation*/
-      body {
-        font-family: Arial;
-        margin: 0;
-      }
+.accordion {
+    background-color: rgb(41, 154, 247);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+.accordion:after {
+    content: '\002B';
+    color: white ;
+    font-weight: bold;
+    float: right;
+    margin-left: 15px;
+}
+.toggle_menu.active span.center-menu-bar{
+    width: 0;
+}
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 15px;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
+}
+/* Css slideshow animation*/
+body {
+    font-family: Arial;
+    margin: 0;
+}
 
 * {
     box-sizing: border-box;
-  }
+}
 
-  img {
+img {
     vertical-align: middle;
-  }
+}
 
-  /* Position the image container (needed to position the left and right arrows) */
-  .container {
+/* Position the image container (needed to position the left and right arrows) */
+.container {
     position: relative;
-  }
+}
 
-  /* Hide the images by default */
-  .mySlides {
+/* Hide the images by default */
+.mySlides {
     display: none;
-  }
+}
 
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
     cursor: pointer;
-  }
+}
 
-  /* Next & previous buttons */
-  .prev,
-  .next {
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -731,61 +804,61 @@ hr{
     font-size: 20px;
     border-radius: 0 3px 3px 0;
     -moz-user-select: none;
-         user-select: none;
+    user-select: none;
     -webkit-user-select: none;
-  }
+}
 
-  /* Position the "next button" to the right */
-  .next {
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+}
 
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
+}
 
-  /* Number text (1/3 etc) */
-  .numbertext {
+/* Number text (1/3 etc) */
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
+}
 
-  /* Container for image text */
-  .caption-container {
+/* Container for image text */
+.caption-container {
     text-align: center;
     background-color: #222;
     padding: 2px 16px;
     color: white;
-  }
+}
 
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
-  /* Six columns side by side */
-  .column {
+/* Six columns side by side */
+.column {
     float: left;
     width: 16.66%;
-  }
+}
 
-  /* Add a transparency effect for thumnbail images */
-  .demo {
+/* Add a transparency effect for thumnbail images */
+.demo {
     opacity: 0.6;
-  }
+}
 
-  .active,
-  .demo:hover {
+.active,
+.demo:hover {
     opacity: 1;
-  }
-  e{
-      color: #222222;
-  }
+}
+e{
+    color: #222222;
+}
 

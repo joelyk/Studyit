@@ -18,16 +18,16 @@ class CreatePersonnesTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gender');
-            $table->string('education_level');
-            $table->string('field');
+            $table->string('education_level')->default("University");
+            $table->string('field')->nullable();
             $table->string('specialization')->nullable();
-            $table->string('address');
+            $table->string('address')->nullable();
             $table->string('phone_number');
             $table->string('email');
             $table->integer('age')->nullable();
-            $table->string('interests');
-            $table->text('career_project');
-            $table->string('stage_requirements');
+            $table->string('interests')->nullable();
+            $table->text('career_project')->nullable();
+            $table->string('stage_requirements')->nullable();
             $table->timestamps();
         });
     }

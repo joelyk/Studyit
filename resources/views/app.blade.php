@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CapBuild</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
       <header>
@@ -22,19 +24,31 @@
       </header>
 
       <!-- section accueil home -->
-      <section id="home">
+      <div class="article-pan">
+      <section id="home" class="article">
         <div class="left">
             <h4>Bienvenue Chez : </h4>
             <h1> Cap<e>Build</e></h1>
             <p>
-              StudyIT est une plateforme d'apprentissage en ligne dédiée à vous offrir les meilleurs cours pour développer vos compétences et atteindre vos objectifs académiques et professionnels. Notre mission est de rendre l'éducation accessible à tous, en fournissant des formations de qualité, dispensées par des experts dans leur domaine.
+              CapBuild est une plateforme d'apprentissage en ligne dédiée à vous offrir les meilleurs cours pour développer vos compétences et atteindre vos objectifs académiques et professionnels. Notre mission est de rendre l'éducation accessible à tous, en fournissant des formations de qualité, dispensées par des experts dans leur domaine.
             </p>
             <button> <a href="{{route('personnes.create')}}">S'inscrire Maintenant</a></button>
         </div>
         <div class="right">
-            <img src="{{ asset('images/onlinestudyit.png') }}" alt="studyit">
+            <img class="img" src="{{ asset('images/onlinestudyit.png') }}" alt="studyit">
         </div>
       </section>
+
+          <section class="article" id="art2">
+
+              <h4>PRINCIPES PÉDAGOGIQUES</h4>
+              <div class="bottom">
+                  <p>
+                      Les méthodes que nous employons partent de la réalité des métiers, soit à partir du vécu professionnel des participants, soit à partir d’études de cas ou de cas filmés. Elles utilisent au maximum l'enrichissement réciproque par le groupe. Les apports théoriques ou méthodologiques nécessaires sont précédés de réflexions en groupes et sont suivis de mises en situation.
+                  </p>
+              </div>
+          </section>
+      </div>
 
       <section id="menu">
         <h4 class="mini_title">Nos Formations</h4>
@@ -43,6 +57,10 @@
         <div class="dish">
           <img src="{{ asset('images/python.png') }}">
           <h2>test</h2>
+            <div class="pop"><span></span>Populaire</div>
+            <div class="desc">
+                qwesdasd lfd fdsplki uiui iui qwesdasd lfd fdsplki uiui iuiqwesdasd lfd fdsplki uiui iuiqwesdasd lfd fdsplki uiui iui
+            </div>
           <a href="geniusniveau1.Nombre de Formations"> Plus d'infos </a>
         </div>
         <div class="dish">
@@ -100,6 +118,19 @@
                 small_menu.classList.toggle('active');
                 menu.classList.toggle('responsive');
                }
+
+        </script>
+        <script>
+            ScrollReveal({
+                reset:true,
+                distance:'60px',
+                duration: 2000,
+                delay: 400
+            });
+            ScrollReveal().reveal('.article h4', { delay: 500,origin: 'left' });
+            ScrollReveal().reveal('.article .bottom', { delay: 600,origin: 'bottom' });
+            ScrollReveal().reveal('.img', { delay: 1200,origin: 'right' });
+
         </script>
 </body>
 </html>
