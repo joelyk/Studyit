@@ -21,7 +21,7 @@ class CreatePersonnesTable extends Migration
             $table->string('education_level')->default("University");
             $table->string('field')->nullable();
             $table->string('specialization')->nullable();
-            $table->string('address')->nullable();
+            $table->string('address');
             $table->string('phone_number');
             $table->string('email');
             $table->integer('age')->nullable();

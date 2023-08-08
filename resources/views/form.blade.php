@@ -59,11 +59,11 @@
                         <label for="gender">Sexe :</label>
                         <label class="lab">
                             Masculin
-                            <input type="radio" name="gender" class="form-radio" value="masculin">
+                            <input type="radio" id="s1" name="gender" class="form-radio" value="masculin">
                         </label>
                         <label class="lab">
                             feminin
-                            <input type="radio" name="gender" class="form-radio" value="feminin">
+                            <input type="radio" id="s1" name="gender" class="form-radio" value="feminin">
                         </label>
                     </div>
                 </fieldset>
@@ -93,11 +93,11 @@
                 <fieldset>
                     <div class="form-group">
                         <label for="interests">Mot de passe :</label>
-                        <input type="password" name="pass" class="form-control">
+                        <input type="password" id="age" name="age" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="interests">Mot de passe :</label>
-                        <input type="password" name="pass" class="form-control">
+                        <input type="password" id="age" name="age" class="form-control">
                     </div>
                 </fieldset>
             </div>
@@ -185,6 +185,6 @@
             menu.classList.toggle('responsive');
         }
     });
-</script>
-</body>
+    </script>
+    </body>
 </html>
