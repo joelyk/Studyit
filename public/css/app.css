@@ -233,6 +233,10 @@ p{
     font-size: 4em;
     margin-bottom: 10px;
 }
+#txt {
+    min-height: 1em; /* or any other value you prefer */
+    font-size: 1.2em;
+}
 /* Style du home */
 
 #home{

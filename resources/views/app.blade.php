@@ -10,6 +10,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="{{ asset('js/parallax.js-1.5.0/parallax.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
+
 </head>
 <body>
       <header>
@@ -86,30 +88,25 @@
                   <div class="bottom">
                       <div class="L">
                         <ul>
-                          <li><h4>Exposé introductif </h4>
+                          <li onclick="changeTxt1(0)"><h4>Exposé introductif</h4>
                               <span class="det" style="display: none">
-                                Cette méthode est utilisée pour donner aux séminaristes les éléments leur permettant d’aborder la phase de pédagogie active qui doit suivre.
                               </span>
                           </li>
-                          <li><h4>Jeux de rôles</h4>
+                          <li onclick="changeTxt1(1)"><h4>Jeux de rôles</h4>
                               <span class="det" style="display: none">
-                                Ces exercices de mise en pratique de situations relationnelles permettent des prises de conscience ou constituent des entraînements aux techniques d'entretien, que ce soit sur le plan commercial, managérial ou sur le plan des simples relations inter-individuelles. Les rôles se partagent entre les "protagonistes" (généralement au nombre de deux) et les observateurs (généralement le reste du groupe). Les observateurs ont un rôle extrêmement actif car l'animateur leur confie des tâches précises d'observation les exerçant à l'analyse des situations vécues. Des permutations permettent à chacun de bénéficier de l'ensemble des acquisitions.
-                                Ces exercices peuvent être filmés en vidéo et exploités immédiatement après si les circonstances et le temps le permettent.
+
                               </span>
                           </li>
-                          <li><h4>Questionnaire formatif</h4>
+                          <li><h4 onclick="changeTxt1(2)">Questionnaire formatif</h4>
                               <span class="det" style="display: none">
-                                Cette méthode consiste à questionner le groupe, de façon +/- ludique, de manière à provoquer une réflexion des participants à partir de leur expérience professionnelle et de les aider à créer leur propre système de représentation de la réalité.
                               </span>
                           </li>
                           <li><h4>Autodiagnostic</h4>
                               <span class="det" style="display: none">
-                                Par cette méthode, l’animateur amène chaque participant à s’interroger sur ses propres pratiques et introduit une distanciation par rapport aux thèmes étudiés.
-                              </span>
+                                </span>
                           </li>
                           <li><h4>Réflexions et échanges d’expériences</h4>
                               <span class="det" style="display: none">
-                                  Ils donnent lieu à des travaux en sous-groupes de trois à quatre personnes. Ce type de travail favorise les échanges d'expériences entre les membres du groupe.
                               </span>
                           </li>
                           <li><h4>Jeux pédagogiques, simulations</h4>
@@ -141,7 +138,7 @@
                       </div>
                       <div class="R">
                           <span class="inf">
-                              <p>
+                              <p id="txt">
                                   Cette méthode est utilisée pour donner aux séminaristes les éléments leur permettant d’aborder la phase de pédagogie active qui doit suivre.
                               </p>
                           </span>
@@ -214,6 +211,7 @@
 
        @include('footer')
         <script>
+
             var small_menu = document.querySelector('.toggle_menu')
             var menu = document.querySelector('.menu')
                small_menu.onclick=function(){
