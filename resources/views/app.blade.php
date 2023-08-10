@@ -44,7 +44,6 @@
                 <img class="img" src="{{ asset('images/onlinestudyit.png') }}" alt="studyit">
             </div>
         </section>
-
           <section class="back-img" data-parallax="scroll" data-image-src="{{ asset('images/backgrounds/back1.jpg') }}">
               <section class="article" id="art2">
 
@@ -149,65 +148,6 @@
 
       </div>
 
-      <section id="menu">
-        <h4 class="mini_title">Nos Formations</h4>
-        <h2 class="title"> Certifiantes </h2>
-      <div class="dishes">
-        <div class="dish">
-          <img src="{{ asset('images/python.png') }}">
-          <h2>test</h2>
-            <div class="pop"><span></span>Populaire</div>
-            <div class="desc">
-                qwesdasd lfd fdsplki uiui iui qwesdasd lfd fdsplki uiui iuiqwesdasd lfd fdsplki uiui iuiqwesdasd lfd fdsplki uiui iui
-            </div>
-          <a href="geniusniveau1.Nombre de Formations"> Plus d'infos </a>
-        </div>
-        <div class="dish">
-         <img src="{{ asset('images/css.jpg') }}">
-         <p> Nombre de Formations 2</p>
-         <h2>test</h2>
-         <a href="geniusniveau2.Nombre de Formations"> Plus d'infos </a>
-       </div>
-       <div class="dish">
-         <img src="{{ asset('images/django.jpg') }}">
-         <p> Nombre de Formations 3</p>
-         <h2>test</h2>
-         <a href="geniusniveau3.Nombre de Formations"> Plus d'infos </a>
-       </div>
-
-  </div>
-</section>
-
-
-      @yield('contentformulaire')
-
-      @yield('contentsearch')
-
-      @yield('contentaffichageformation')
-
-
-
-<!-- Section  a propos de nous-->
-       <section id="about_us">
-          <h4 class="mini_title">A propos de Nous</h4>
-          <h2 class="title">Pourquoi nous choisir ?</h2>
-          <div class="about">
-            <div class="left">
-                <img src="{{ asset('images/excellence.png') }}">
-            </div>
-
-            <div class="right">
-                <h3> Nos Formations</h3>
-                <P>
-                  Nous proposons une large gamme de formations dans divers domaines, allant des sciences et de la technologie aux arts et aux langues. Que vous soyez étudiant, professionnel en reconversion ou simplement passionné d'apprendre, vous trouverez des cours adaptés à vos besoins et à votre niveau.
-                </P>
-                <h3>   Des Cours de Qualité </h3>
-                <P>
-                  Tous nos cours sont soigneusement conçus pour vous offrir une expérience d'apprentissage enrichissante. Nos instructeurs sont des professionnels qualifiés, passionnés par leur métier, qui mettent tout en œuvre pour vous transmettre leur savoir de manière claire et captivante.                </P>
-                <button> <a href="/formations"> Decouvre Plus</a></button>
-            </div>
-          </div>
-       </section>
 
        @include('footer')
         <script>
