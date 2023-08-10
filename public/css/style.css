@@ -281,7 +281,7 @@ header{
     margin: 20px 0;
     padding: 5px 60px;
     background-color: red;
-    border: 1;
+   // border: 1;
 }
 
 .about .right button a{
